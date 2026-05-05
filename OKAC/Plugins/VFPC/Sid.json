@@ -63,7 +63,9 @@
           "direction": "ODD",
           "max_fl": 270,
           "destinations": [
-            "OBBI"
+            "OBBI",
+            "OBBS",
+            "OBKH"
           ],
           "airways": [
             "B416"
