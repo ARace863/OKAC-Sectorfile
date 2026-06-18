@@ -1,6 +1,7 @@
 name: Compile Configurator.exe
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - "main"
@@ -62,9 +63,10 @@ jobs:
     runs-on: windows-latest
     needs: [changes, test]
     if: |
-      needs.changes.outputs.source == 'true' &&
-      github.event_name == 'push' &&
-      github.ref == 'refs/heads/main'
+      github.event_name == 'workflow_dispatch' ||
+      (needs.changes.outputs.source == 'true' &&
+       github.event_name == 'push' &&
+       github.ref == 'refs/heads/main')
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
