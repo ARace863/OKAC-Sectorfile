@@ -6,13 +6,13 @@ on:
     branches:
       - "main"
     paths:
-      - ".github/scripts/configurator-okac/**"
+      - ".github/scripts/configurator/**"
       - ".github/workflows/configurator_okac.yml"
   pull_request:
     branches:
       - "main"
     paths:
-      - ".github/scripts/configurator-okac/**"
+      - ".github/scripts/configurator/**"
       - ".github/workflows/configurator_okac.yml"
 
 jobs:
@@ -35,7 +35,7 @@ jobs:
         with:
           filters: |
             source:
-              - '.github/scripts/configurator-okac/**'
+              - '.github/scripts/configurator/**'
               - '.github/workflows/configurator_okac.yml'
 
   test:
@@ -87,14 +87,14 @@ jobs:
 
       - name: Compile executable
         run: |
-          cd .github/scripts/configurator-okac
+          cd .github/scripts/configurator
           Remove-Item -Force Configurator.spec -ErrorAction SilentlyContinue
           Remove-Item -Force configurator.spec -ErrorAction SilentlyContinue
           pyinstaller --noconfirm --onefile --windowed --name Configurator --icon logo.ico --add-data "logo.ico;." --add-data "banner.png;." configurator.py
 
       - name: Move executable to destination
         run: |
-          $src = ".github\scripts\configurator-okac\dist\Configurator.exe"
+          $src = ".github\scripts\configurator\dist\Configurator.exe"
           $dst = "OKAC\Plugins\Configurator"
           if (Test-Path $src) {
             New-Item -ItemType Directory -Force -Path $dst | Out-Null
