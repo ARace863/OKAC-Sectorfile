@@ -7,13 +7,13 @@ on:
       - "main"
     paths:
       - ".github/scripts/configurator/**"
-      - ".github/workflows/configurator_okac.yml"
+      - ".github/workflows/configurator.yml"
   pull_request:
     branches:
       - "main"
     paths:
       - ".github/scripts/configurator/**"
-      - ".github/workflows/configurator_okac.yml"
+      - ".github/workflows/configurator.yml"
 
 jobs:
 
@@ -36,7 +36,7 @@ jobs:
           filters: |
             source:
               - '.github/scripts/configurator/**'
-              - '.github/workflows/configurator_okac.yml'
+              - '.github/workflows/configurator.yml'
 
   test:
     name: Run tests
