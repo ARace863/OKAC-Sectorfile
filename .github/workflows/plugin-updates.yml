@@ -2,7 +2,7 @@ name: Check for Plugin Updates
 
 on:
   schedule:
-    - cron: "17 22 * * *"
+    - cron: "00 22 * * *"
   workflow_dispatch:
 
 permissions:
@@ -17,7 +17,7 @@ jobs:
       VERSION_FILE: .github/plugin_versions.json
       BADGES_DIR: .github/badges
       REPO_OWNER: Kuwait-Iraq-vACC
-      REPO_NAME: OKAC-Sectorfile
+      REPO_NAME: ORBB-Sectorfile
 
     steps:
       - name: Checkout
@@ -106,7 +106,7 @@ jobs:
           update_badge() {
             local plugin="$1"
             local new_version="$2"
-            local badge_file="$BADGES_DIR/$plugin/$plugin.json"
+            local badge_file="$BADGES_DIR/$plugin.json"
 
             if [[ ! -f "$badge_file" ]]; then
               echo "⚠️  Badge file not found for $plugin — skipping badge update"
@@ -146,7 +146,7 @@ jobs:
                   .key,
                   .value.repo,
                   (.value.message // "0.0.0"),
-                  (.value.allow_prerelease // false)
+                  (.value.allow_prerelease // true)
                 ]
               | @tsv
             ' "$VERSION_FILE"
