@@ -1,3 +1,4 @@
+Maps_URL=https://raw.githubusercontent.com/Kuwait-Iraq-vACC/OKAC-Sectorfile/refs/heads/main/OKAC/Plugins/TopSky%20-%20Light/TopSkyMaps.txt
 
 Setup_COOPANS=1
 Setup_AutoSignIn=1

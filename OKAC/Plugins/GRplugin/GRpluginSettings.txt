@@ -1,6 +1,6 @@
 // General Settings
 
-Maps_URL=https://raw.githubusercontent.com/khaleej-vacc/Khaleej-Sector-File-OKAC/main/OKAC/Plugins/GRplugin/GRpluginMaps.txt
+Maps_URL=https://raw.githubusercontent.com/Kuwait-Iraq-vACC/OKAC-Sectorfile/refs/heads/main/OKAC/Plugins/GRplugin/GRpluginMaps.txt
 System_GlobalMenu_FontSize=15
 RawVideo_MaxHistory=0
 Track_Heading_Line=0
