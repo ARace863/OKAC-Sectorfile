@@ -1,4 +1,3 @@
-Maps_URL=https://raw.githubusercontent.com/Kuwait-Iraq-vACC/OKAC-Sectorfile/refs/heads/main/OKAC/Plugins/TopSky%20Aerodrome/TopSkyMaps.txt
 
 Setup_COOPANS=1
 Setup_AutoSignIn=1
@@ -189,20 +188,25 @@ Track_PredictionLine=0
 
 RwyAppLines_Auto=0
 
+
+Label_N_Default=0
+Label_Alt_Digits=3
+
 // Colors
-Color_Unconcerned=131,131,131
-Color_Coordination=180,180,180
+
+Color_Assumed=255,255,255
+Color_Concerned=255,255,255
+Color_Coordination=255,255,255
+Color_Informed=255,255,255
+Color_Redundant=255,255,255
+Color_Unconcerned=255,255,255
+
 Color_Proposition_Accepted=0,232,0
 Color_Proposition_In=255,130,180
 Color_Proposition_Out=0,130,180
 Color_Proposition=255,130,180
-Color_Assumed=0,255,0
-Color_Redundant=96,255,227
 Color_Information=0,232,0
 Color_Information_FL=41,245,41
-Color_Informed=175,125,175
-Color_Informed_2=255,195,75
-Color_Informed_3=147,124,108
 
 Color_Foreground=159,195,194
 Color_Background=42,44,44
